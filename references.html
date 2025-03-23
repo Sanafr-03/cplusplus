@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References</title>
+    <link rel="stylesheet" href="references.css">
+</head>
+<body>
+    <div class="sidebar"> 
+        <h2>cplusplus.com</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+    
+            <!-- Tutorials Button -->
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Tutorials</button>
+                    <div class="dropdown-content">
+                      <a href="#">C++ Language</a>
+                      <a href="#">Basics Of C++</a>
+                      <a href="structure.html">Structure of<br> program</a>
+                    </div>
+                </div>
+            </li>
+            
+            
+    
+            <li><a href="references.html" class="active">References</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="forum.html">Forum</a></li>
+        </ul>
+    
+        <div class="auth-links">
+            <p>Sign up</p>
+            <p>Login</p>
+            <p>[Legacy Version]</p>
+        </div>
+    </div>
+
+    <!-- Top Navbar for Mobile & Tablet -->
+<div class="mobile-navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Tutorials Dropdown -->
+        <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul class="dropdown-content">
+                <li><a href="#">C++ Language</a></li>
+                <li><a href="#">Basics of C++</a></li>
+                <li><a href="structure.html">Structure of Program</a></li>
+            </ul>
+        </li>
+
+        <li><a href="references.html" class="active">References</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="forum.html">Forum</a></li>
+    </ul>
+</div>
+
+
+    <div class="main-content">
+         <!-- Transparent Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#c-library">C Library</a></li>
+            <li><a href="#containers">Containers</a></li>
+            <li><a href="#io-stream">I/O Stream</a></li>
+            <li><a href="#atomics-threading">Atomicity</a></li>
+            <li><a href="#miscellaneous">Miscellaneous</a></li>
+        </ul>
+    </nav>
+ 
+    <!-- Page Heading -->
+    <h1 class="main-heading">References</h1><hr>
+
+    <!-- C Library Section -->
+    <section id="c-library">
+        <br><br><h1 class="section-heading">Standard C++ Library reference</h1>
+        <h2 class="section-heading">C Library<hr></h2>
+        <p class="detail">The elements of the C language library are also included as a subset of the C++ Standard library. These cover many aspects, from general utility functions and macros to input/output functions and dynamic memory management functions:</p>
+        <div class="card-slider">
+            <button class="prev-btn">&#10094;</button>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>&lt;cassert&gt; (assert.h)</h3><br>
+                    <p>C Diagnostics Library</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;cctype&gt; (ctype.h)</h3><br>
+                    <p>Character handling functions</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;cerrno&gt; (errno.h)</h3><br>
+                    <p>C Errors</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;cfenv&gt; (fenv.h)</h3><br>
+                    <p>Floating-point environment</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;cfloat&gt; (float.h)</h3><br>
+                    <p>Characteristics of floating-point types</p>
+                </div><div class="card"><h3>&lt;cinttypes&gt; (inttypes.h)</h3><br>><p>C integer types</p></div>
+                <div class="card"><h3>&lt;ciso646&gt; (iso646.h)</h3><br><p>Alternative operator spellings</p></div>
+                <div class="card"><h3>&lt;climits&gt; (limits.h)</h3><br><p>Sizes of integral types</p></div>
+                <div class="card"><h3>&lt;clocale&gt; (locale.h)</h3><br><p>Localization library</p></div>
+                <div class="card"><h3>&lt;cmath&gt; (math.h)</h3><br><p>Numerics library</p></div>
+                <div class="card"><h3>&lt;csetjmp&gt; (setjmp.h)</h3><br><p>Non-local jumps</p></div>
+                <div class="card"><h3>&lt;csignal&gt; (signal.h)</h3><br><p>Signal handling</p></div>
+                <div class="card"><h3>&lt;cstdarg&gt; (stdarg.h)</h3><br><p>Variable arguments handling</p></div>
+                <div class="card"><h3>&lt;cstdbool&gt; (stdbool.h)</h3><br><p>Boolean type</p></div>
+                <div class="card"><h3>&lt;cstddef&gt; (stddef.h)</h3><br><p>C standard definitions</p></div>
+                <div class="card"><h3>&lt;cstdint&gt; (stdint.h)</h3><br><p>Integer types</p></div>
+                <div class="card"><h3>&lt;cstdio&gt; (stdio.h)</h3><br><p>Input/Output operations</p></div>
+                <div class="card"><h3>&lt;cstdlib&gt; (stdlib.h)</h3><br><p>General utilities</p></div>
+                <div class="card"><h3>&lt;cstring&gt; (string.h)</h3><br><p>C Strings</p></div>
+                <div class="card"><h3>&lt;ctgmath&gt; (tgmath.h)</h3><br><p>Type-generic math</p></div>
+                <div class="card"><h3>&lt;ctime&gt; (time.h)</h3><br><p>C Time Library</p></div>
+                <div class="card"><h3>&lt;cuchar&gt; (uchar.h)</h3><br><p>Unicode characters</p></div>
+                <div class="card"><h3>&lt;cwchar&gt; (wchar.h)</h3><br><p>Wide characters</p></div>
+                <div class="card"><h3>&lt;cwctype&gt; (wctype.h)</h3><br><p>Wide character type</p></div>
+            </div>
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </section>
+    <section id="containers">
+        <h2 class="section-heading">Containers<hr></h2>
+        <div class="glass-jar">
+            <div class="jar-lid"></div>
+            <div class="jar-body">
+                <div class="box" data-hover="Array header (header)">&lt;array&gt;</div>
+                <div class="box" data-hover="Bitset header (header)">&lt;bitset&gt;</div>
+                <div class="box" data-hover="Deque header (header)">&lt;deque&gt;</div>
+                <div class="box" data-hover="Forward list header (header)">&lt;forward_list&gt;</div>
+                <div class="box" data-hover="List header (header)">&lt;list&gt;</div>
+                <div class="box" data-hover="Map header (header)">&lt;map&gt;</div>
+                <div class="box" data-hover="Queue header (header)">&lt;queue&gt;</div>
+                <div class="box" data-hover="Set header (header)">&lt;set&gt;</div>
+                <div class="box" data-hover="Stack header (header)">&lt;stack&gt;</div>
+                <div class="box" data-hover="Unordered map header (header)">&lt;unordered_map&gt;</div>
+                <div class="box" data-hover="Unordered set header (header)">&lt;unordered_set&gt;</div>
+                <div class="box" data-hover="Vector header (header)">&lt;vector&gt;</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="io-stream">
+        <h2  class="section-heading3">Input/Output Stream Library<hr></h2>
+        <p class="detail">
+            The Input/Output Stream Library in C++ provides facilities for performing input and output operations. 
+            It includes classes for handling streams such as <code>cin</code>, <code>cout</code>, <code>cerr</code>, 
+            and <code>clog</code>, allowing formatted and unformatted I/O operations.
+        </p>
+        <div class="gif-container">
+            <img src="iostream.gif" alt="I/O Stream Animation">
+        </div>
+    </section>
+    
+    <section id="atomics-threading">
+        <h2  class="section-heading">Atomics and Threading Library<hr></h2>
+        <div class="detail">
+            Provides facilities for atomic operations and multithreading, ensuring data integrity 
+            and synchronization in concurrent programs.
+        </div>
+    
+        <div class="clothesline-container">
+            <div class="rope"></div>
+    
+            <div class="clip-box">
+                <h3>&lt;atomic&gt;</h3>
+                <p>Atomic (header)</p>
+            </div>
+    
+            <div id="clip3" class="clip-box">
+                <h3>&lt;condition_<br>variable&gt;</h3>
+                <p>Condition variable (header)</p>
+            </div>
+    
+            <div class="clip-box">
+                <h3>&lt;future&gt;</h3>
+                <p>Future (header)</p>
+            </div>
+    
+            <div class="clip-box">
+                <h3>&lt;mutex&gt;</h3>
+                <p>Mutex (header)</p>
+            </div>
+    
+            <div class="clip-box">
+                <h3>&lt;thread&gt;</h3>
+                <p>Thread (header)</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="misc-section">
+        <h2 id="miscellaneous" class="section-heading">Miscellaneous Headers<hr></h2>
+        <p class="detail">
+            The miscellaneous headers in C++ provide various utility functionalities that cover algorithms, memory management, and more.
+        </p>
+    
+        <div class="card-slider">
+            <button class="prev-btn">&#10094;</button>
+    
+            <div class="cards-container">
+                <div class="card">
+                    <h3>&lt;algorithm&gt;</h3><br>
+                    <p>Standard Template Library: Algorithms</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;chrono&gt;</h3><br>
+                    <p>Time library</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;codecvt&gt;</h3><br>
+                    <p>Unicode conversion facets</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;complex&gt;</h3><br>
+                    <p>Complex numbers library</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;exception&gt;</h3><br>
+                    <p>Standard exceptions</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;functional&gt;</h3><br>
+                    <p>Function objects</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;initializer_list&gt;</h3><br>
+                    <p>Initializer list</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;iterator&gt;</h3><br>
+                    <p>Iterator definitions</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;limits&gt;</h3><br>
+                    <p>Numeric limits</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;locale&gt;</h3><br>
+                    <p>Localization library</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;memory&gt;</h3><br>
+                    <p>Memory elements</p>
+                </div>
+                <div class="card">
+                    <h3>&lt;new&gt;</h3><br>
+                    <p>Dynamic memory</p>
+                </div>
+            </div>
+    
+            <button class="next-btn">&#10095;</button>
+        </div>
+    </section>
+    
+    <section class="update-section">
+        <h2 id="update-progress" class="section-heading">Update Progress<hr></h2>
+        <p class="detail">
+            Work is under progress to update the whole reference to the latest standard. 
+            To check the status of each header, see <strong>Update Progress</strong>.
+        </p>
+    </section><br><br><br><br><hr>
+    <footer class="footer">
+        
+        <div class="footer-links">
+            <a href="index.html">Home page</a> | 
+            <a href="#">Privacy policy</a>
+        </div>
+        <p>© cplusplus.com, 2000-2023 - All rights reserved - <strong>v3.3.4s</strong></p>
+        <a href="#" class="contact-link">Spotted an error? contact us</a>
+    </footer>
+    
+</div>
+
+    <script src="r_script.js"></script>
+</body>
+</html>

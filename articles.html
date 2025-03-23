@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Learning Dashboard - Articles</title>
+    <link rel="stylesheet" href="articles.css">
+</head>
+<body>
+    <div class="sidebar"> 
+        <h2>cplusplus.com</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+    
+            <!-- Tutorials Button -->
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Tutorials</button>
+                    <div class="dropdown-content">
+                      <a href="#">C++ Language</a>
+                      <a href="#">Basics Of C++</a>
+                      <a href="structure.html">Structure of<br> program</a>
+                    </div>
+                </div>
+            </li>
+            
+            
+    
+            <li><a href="references.html">References</a></li>
+            <li><a href="articles.html" class="active">Articles</a></li>
+            <li><a href="forum.html">Forum</a></li>
+        </ul>
+    
+        <div class="auth-links">
+            <p>Sign up</p>
+            <p>Login</p>
+            <p>[Legacy Version]</p>
+        </div>
+    </div>
+
+    <!-- Top Navbar for Mobile & Tablet -->
+<div class="mobile-navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <!-- Tutorials Dropdown -->
+        <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul class="dropdown-content">
+                <li><a href="#">C++ Language</a></li>
+                <li><a href="#">Basics of C++</a></li>
+                <li><a href="structure.html">Structure of Program</a></li>
+            </ul>
+        </li>
+
+        <li><a href="references.html">References</a></li>
+        <li><a href="articles.html" class="active">Articles</a></li>
+        <li><a href="forum.html">Forum</a></li>
+    </ul>
+</div>
+
+    <div class="main-content">
+        <nav class="navbar">
+            <div class="nav-item"><a href="#category-section">Categories</a></div>
+          
+            <!-- Date Dropdown -->
+            <div class="nav-item dropdown">
+              <label for="date-toggle">Date</label>
+              <input type="checkbox" id="date-toggle" class="toggle-checkbox">
+              <div class="dropdown-content1">
+                <div>Newest to Oldest</div>
+                <div>Oldest to Newest</div>
+              </div>
+            </div>
+          
+            <!-- Score Dropdown -->
+            <div class="nav-item dropdown">
+              <label for="score-toggle">Score</label>
+              <input type="checkbox" id="score-toggle" class="toggle-checkbox">
+              <div class="dropdown-content1">
+                <div>Highest to Lowest</div>
+                <div>Lowest to Highest</div>
+              </div>
+            </div>
+          </nav>
+          
+          <section id="categories">
+            <h2 id="article" class="section-heading">Articles<hr></h2><br>
+            <div class="card-container" id="card-container">
+              <!-- Cards will be inserted here -->
+            </div>
+          </section>
+
+          <!-- Categories Section -->
+          <section id="category-section">
+            <h2 id="article" class="section-heading">Categories<br><hr></h2><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#">Algorithms</a></td>
+                        <td>Algorithms and formulas for specific purposes</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">C++ 11</a></td>
+                        <td>The new C++ standard</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Graphics and Multimedia</a></td>
+                        <td>Including DirectX, OpenGL...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">How-To</a></td>
+                        <td>Guided sets of instructions on a particular topic</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Language Features</a></td>
+                        <td>Specific C++ language features</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Unix/Linux Programming</a></td>
+                        <td>For all UNIX platforms</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Standard Library</a></td>
+                        <td>C++ standard library</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Tips and Tricks</a></td>
+                        <td>Programming tips</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Tools and Libraries</a></td>
+                        <td>Compilers, IDEs, debuggers, proprietary libraries...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Visual C++</a></td>
+                        <td>Including MFC, ATL, C++/CLI...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">Windows API</a></td>
+                        <td>Programming Windows using its API</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br><br><br><br><hr>
+    <footer class="footer">
+        
+        <div class="footer-links">
+            <a href="index.html">Home page</a> | 
+            <a href="#">Privacy policy</a>
+        </div>
+        <p>© cplusplus.com, 2000-2023 - All rights reserved - <strong>v3.3.4s</strong></p>
+        <a href="#" class="contact-link">Spotted an error? contact us</a>
+    </footer>
+    
+    </div>
+
+    <script src="articles.js"></script>
+</body>
+</html>

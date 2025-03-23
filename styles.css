@@ -1,0 +1,739 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #4061db;
+    width: 200px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed; /* Makes sidebar static */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: -7px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+/* Navigation List */
+.sidebar ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+/* Sidebar Anchor Tags */
+.sidebar ul li a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Makes text white */
+    font-size: 20px;
+    display: block;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+/* Active Page Styling */
+.sidebar ul li a.active {
+    padding:10px 20px;
+    margin: 10px 0;
+    background-color: white;
+    color: #5A77DF;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* Style the Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 26px;;
+}
+
+/* The container <div> - Needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:#5A77DF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Show the dropdown content and make text purple on hover of Tutorials */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links to purple when hovering over Tutorials */
+.dropdown:hover .dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+}
+
+/* Hover Effect — Only Underline */
+.dropdown-content a:hover {
+    background-color: white;
+    color:#5A77DF;
+    text-decoration: underline;
+}
+
+/* Show the dropdown menu when clicked */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Authentication Links */
+.auth-links {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Authentication Paragraphs */
+.auth-links p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover Effect for Auth Links */
+.auth-links p:hover {
+    color: white;
+}
+/* Hide Mobile Navbar by Default */
+.mobile-navbar {
+    display: none;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+
+    /* Main Content without Sidebar */
+    .main-content {
+        margin-left: 0 !important;
+        transition: margin-left 0.3s ease;
+        padding: 15px;
+        margin-top:50px;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5A77DF;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Navbar List */
+    .mobile-navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar Links */
+    .mobile-navbar ul li a {
+        text-decoration: none;
+        padding: 8px 12px;
+        font-size: 1rem;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    /* Active and Hover State */
+    .mobile-navbar ul li a:hover,
+    .mobile-navbar ul li a.active {
+        background-color: white;
+        color: #5A77DF;
+    }
+
+    /* Tutorials Dropdown */
+    .mobile-navbar .dropdown {
+        position: relative;
+    }
+
+    /* Dropdown Content */
+    .mobile-navbar .dropdown-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1001;
+    }
+
+    /* Show on Hover */
+    .mobile-navbar .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    /* Dropdown Links */
+    .mobile-navbar .dropdown-content li {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .mobile-navbar .dropdown-content li a {
+        padding: 8px;
+        color: #5A77DF;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+    }
+
+    /* Hover Effect on Dropdown Items */
+    .mobile-navbar .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Hide Desktop Sidebar on Mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Adjust Main Content for Mobile */
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px; /* Avoid overlap with navbar */
+    }
+    .search-container {
+        width:90px;
+    }
+    .search-box {
+        margin-left:-110px;
+        font-size: 0.5rem;
+    }
+    .search-icon {
+        margin-left:250px;
+    }
+    /* Forum Table Text & Layout */
+    .forum-table th,
+    .forum-table td {
+        padding: 6px;
+        font-size: 0.2rem;
+    }
+
+    .forum-table th {
+        width: auto;
+    }
+    /* Hero Section */
+    .hero-section {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem; /* Smaller headline */
+        margin-bottom: 10px;
+    }
+
+    .hero-section span {
+        font-size: 1.2rem;
+    }
+
+    
+
+    /* Feature Boxes */
+    .feature-section {
+        flex-direction: row; /* Stack boxes vertically */
+        align-items: center;
+    }
+
+    .feature-box {
+        width: 80%; /* Full width on mobile */
+        margin-bottom: 15px;
+        padding: 15px;
+        font-size: 0.9rem; /* Smaller text */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-box .icon {
+        font-size: 1.5rem; /* Smaller icon */
+    }
+
+    /* Forum Section */
+    .forum-section {
+        padding: 15px;
+    }
+
+    /* Forum Table */
+    table {
+        table-layout: auto; /* Flexible layout */
+        font-size: 0.8rem; /* Smaller text */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding */
+    }
+
+    /* Adjust Column Widths for Mobile */
+    th:nth-child(1), td:nth-child(1) { /* Category */
+        width: 35%; /* Wider for better readability */
+    }
+    th:nth-child(2), td:nth-child(2) { /* Posted By */
+        width: 20%;
+    }
+    th:nth-child(3), td:nth-child(3) { /* Topic */
+        width: 15%;
+    }
+    th:nth-child(4), td:nth-child(4) { /* Likes */
+        width: 15%;
+    }
+    th:nth-child(5), td:nth-child(5) { /* Replies */
+        width: 15%;
+    }
+
+    /* Tag Styling */
+    .tag {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Footer Section */
+    .footer {
+        font-size: 12px; /* Smaller footer text */
+        padding: 8px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+        margin: 0 3px;
+    }
+
+    .contact-link {
+        font-size: 12px;
+    }
+}
+
+/* Smooth Transition */
+.sidebar,
+.sidebar ul {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scroll main content if needed */
+    background-color: #f5f6fa;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #4061db;
+    background-size: cover;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    /* Shining animation */
+    background-image: linear-gradient(145deg, #4061db, #5a77df, #4061db);
+    background-size: 300% 300%;
+    animation: shine 4s infinite linear;
+}
+
+/* Hero Title */
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background-image: linear-gradient(90deg, #fff, #b4c5ff, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 3s infinite linear;
+}
+
+/* Highlighted Word */
+.hero-section span {
+    color: rgb(196, 222, 243);
+    text-shadow: 0 0 10px #fff, 0 0 20px #c4def3;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    width: 400px;
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+/* Search Box */
+.search-box {
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 45px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+    background: linear-gradient(145deg, #ffffff, #f0f4ff);
+    box-shadow: 0 0 15px rgba(90, 119, 223, 0.2);
+}
+
+/* Search Icon */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #5A77DF; /* Purple color */
+    pointer-events: none;
+    animation: pulse 2s infinite;
+}
+
+/* Hover & Focus Effect */
+.search-box:focus {
+    border-color: #5A77DF;
+    box-shadow: 0 0 25px rgba(90, 119, 223, 0.3);
+}
+
+/* Shine Effect (White Line) */
+.hero-section::after,
+.search-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-45deg);
+    animation: shineLine 2s ease-in-out;
+}
+
+/* Keyframe Animations */
+
+/* One-Time Shine on Page Reload */
+@keyframes shineLine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Text Shine Animation */
+@keyframes textShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Hide scrollbar during animation */
+.card:hover ~ body {
+    overflow-x: hidden;
+  }
+  
+
+/* Pulse Effect for Search Icon */
+@keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.2); }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+
+/* Text Shine Animation */
+@keyframes textShine {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Pulse Effect for Search Icon */
+@keyframes pulse {
+    0% { transform: translateY(-50%) scale(1); }
+    50% { transform: translateY(-50%) scale(1.2); }
+    100% { transform: translateY(-50%) scale(1); }
+}
+
+
+/* Feature Section */
+.feature-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.feature-box {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 4px 15px #4061db;
+}
+.feature-box .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Icon and Text Styles */
+.feature-box i,
+.feature-box h3 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Remove Underline */
+.feature-box:hover,
+.feature-box:visited,
+.feature-box:link {
+    text-decoration: none;
+}
+
+/* Forum Section */
+.forum-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Keeps columns fixed */
+    word-wrap: break-word; /* Enables text wrapping */
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+thead {
+    background-color: #f0f4f8;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Adjust Column Widths */
+th:nth-child(1), td:nth-child(1) { /* Category Column */
+    width: 28%;
+}
+th:nth-child(2), td:nth-child(2) { /* Posted By Column (Replacing Views) */
+    width: 16%;
+}
+th:nth-child(3), td:nth-child(3) { /* Topic Column */
+    width: 10%; /* Increased width for the topic */
+}
+th:nth-child(4), td:nth-child(4) { /* Likes Column */
+    width: 10%; /* Narrow column for likes */
+}
+th:nth-child(5), td:nth-child(5) { /* Replies Column */
+    width: 14%; /* Narrow column for replies */
+}
+.tag {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Prevents line breaks */
+    display: inline-block; /* Keeps the background intact */
+    max-width: 100%; /* Ensures it doesn't overflow the container */
+    overflow: hidden; /* Hides overflow if text is too long */
+    text-overflow: ellipsis; /* Adds '...' if text is too long */
+}
+.b { background-color: #4a47a3; }
+.g { background-color: #6a1b9a; }
+.g { background-color: #039be5; }
+.l { background-color: #8e44ad; }
+.l { background-color: #d35400; }
+
+/* Disable Horizontal Scroll */
+table {
+    table-layout: fixed;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 768px) {
+    /* Responsive Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Each row as block (card-like) */
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hide table header */
+    thead {
+        display: none;
+    }
+
+    /* Individual Cell */
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.9rem;
+    }
+
+    /* Add labels on mobile */
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+    }
+
+    /* Responsive Tag Styles */
+    .tag {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+        border-radius: 12px;
+        color: white;
+        white-space: nowrap;
+    }
+
+    /* Category Colors */
+    .b { background-color: #4a47a3; } /* Beginners */
+    .g { background-color: #039be5; } /* General */
+    .l { background-color: #d35400; } /* Lounge */
+    .w { background-color: #8e44ad; } /* Windows */
+}
+
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: #4b5dab;
+    text-decoration: underline;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color:#4B0082;
+}
+
+/* Contact Link */
+.contact-link {
+    color:#4061db;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contact-link:hover {
+    color:#4B0082;
+}

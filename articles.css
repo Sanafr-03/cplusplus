@@ -1,0 +1,551 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #4061db;
+    width: 200px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed; /* Makes sidebar static */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: -7px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+/* Navigation List */
+.sidebar ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+/* Sidebar Anchor Tags */
+.sidebar ul li a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Makes text white */
+    font-size: 20px;
+    display: block;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+/* Active Page Styling */
+.sidebar ul li a.active {
+    padding:10px 20px;
+    margin: 10px 0;
+    background-color: white;
+    color: #5A77DF;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* Style the Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 26px;;
+}
+
+/* The container <div> - Needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:#5A77DF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Show the dropdown content and make text purple on hover of Tutorials */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links to purple when hovering over Tutorials */
+.dropdown:hover .dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+}
+
+/* Hover Effect — Only Underline */
+.dropdown-content a:hover {
+    background-color: white;
+    color:#5A77DF;
+    text-decoration: underline;
+}
+
+/* Show the dropdown menu when clicked */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Authentication Links */
+.auth-links {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Authentication Paragraphs */
+.auth-links p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover Effect for Auth Links */
+.auth-links p:hover {
+    color: white;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+
+    /* Main Content without Sidebar */
+    .main-content {
+        margin-left: 0 !important;
+        transition: margin-left 0.3s ease;
+        padding: 15px;
+        margin-top:50px;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5A77DF;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Navbar List */
+    .mobile-navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar Links */
+    .mobile-navbar ul li a {
+        text-decoration: none;
+        padding: 8px 12px;
+        font-size: 1rem;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    /* Active and Hover State */
+    .mobile-navbar ul li a:hover,
+    .mobile-navbar ul li a.active {
+        background-color: white;
+        color: #5A77DF;
+    }
+
+    /* Tutorials Dropdown */
+    .mobile-navbar .dropdown {
+        position: relative;
+    }
+
+    /* Dropdown Content */
+    .mobile-navbar .dropdown-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1001;
+    }
+
+    /* Show on Hover */
+    .mobile-navbar .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    /* Dropdown Links */
+    .mobile-navbar .dropdown-content li {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .mobile-navbar .dropdown-content li a {
+        padding: 8px;
+        color: #5A77DF;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+    }
+
+    /* Hover Effect on Dropdown Items */
+    .mobile-navbar .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Hide Desktop Sidebar on Mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Adjust Main Content for Mobile */
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px; /* Avoid overlap with navbar */
+    }
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scroll main content if needed */
+    background-color: #f5f6fa;
+    position:relative;
+}
+
+  
+/* Navbar */
+.navbar {
+    background: #5873d6;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar Item */
+  .nav-item {
+    padding: 10px 20px;
+    background-color: #7f9de1;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  .nav-item a {
+    padding: 2px 10px;
+    background-color: #7f9de1;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  /* Hover Effect */
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Hide Checkbox */
+  .toggle-checkbox {
+    display: none;
+  }
+  
+  /* Dropdown Content (Initially Hidden) */
+  .dropdown-content1 {
+    position: absolute;
+    background: #c4cef0;
+    color:#4061db;
+    width:165px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    text-align: center;
+    margin-top: 2px;
+    border-radius: 10px;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  /* Show Dropdown when Checkbox is Checked */
+  .toggle-checkbox:checked + .dropdown-content1 {
+    display: flex;
+  }
+  
+  /* Dropdown List Item */
+  .dropdown-content1 div {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, text-decoration 0.3s;
+  }
+  
+  /* Underline on Hover */
+  .dropdown-content1 div:hover {
+    text-decoration: underline;
+    background-color: #a3b4e0;
+  }
+  
+  /* Clicked Effect */
+  .dropdown-content1 div:active {
+    background-color: #7f9de1;
+    color: #4061db;
+    font-weight: bold;
+  }
+  
+  .section-heading {
+    margin-top:50px;
+    font-size: 2.8rem;
+    color: #4b5dab;
+    margin-bottom: 30px;
+    text-align:center;
+  }
+  /* Cards */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-color: solid 5px #4061db;
+  }
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    height:auto;
+    border: 1px solid #4061db;
+    box-shadow: 2px 2px 8px #4061db; /* Soft shadow */
+    border-color:5px #4061db;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Add margin below the title */
+.card h3 {
+    margin-bottom: 35px; /* Adjust the value as needed */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#4061db;
+    text-align: center;
+  }
+  
+  .card p {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .date {
+    margin-top: 25px;
+    font-size: 16px;
+    color: #818181;
+  }
+  .score {
+    font-size: 12px;
+    color: #818181;
+  }
+  
+ /* Table Container */
+#category-section {
+    
+    margin-top:40px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Table Styling */
+table {
+    width: 90%;
+    border-radius: 15px;
+    border-collapse: collapse;
+    margin-left:55px;
+    margin-top: 15px;
+    background: linear-gradient(145deg, #5A77DF, #f5fcff);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+th {
+    background-color:#4b5dab;
+    color: white;
+    font-size: 1.1rem;
+}
+
+td a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td {
+    font-size: 1rem;
+    color: #302f2f;
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #f9f9ff;
+}
+
+@media (max-width: 768px) {
+    /* Center the table and remove horizontal scrolling */
+    table {
+        width: 90%;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+}
+
+/* Responsive Scroll */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sidebar {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+}
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: #4b5dab;
+    text-decoration: underline;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color:#4B0082;
+}
+
+/* Contact Link */
+.contact-link {
+    color:#4061db;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contact-link:hover {
+    color:#4B0082;
+}

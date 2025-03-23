@@ -1,0 +1,614 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #4061db;
+    width: 200px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed; /* Makes sidebar static */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: -7px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+/* Navigation List */
+.sidebar ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+}
+
+/* Sidebar List Items */
+.sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+/* Sidebar Anchor Tags */
+.sidebar ul li a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Makes text white */
+    font-size: 20px;
+    display: block;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+/* Active Page Styling */
+.sidebar ul li a.active {
+    padding:10px 20px;
+    margin: 10px 0;
+    background-color: white;
+    color: #5A77DF;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.sidebar ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* Style the Dropdown Button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin-left: 26px;;
+}
+
+/* The container <div> - Needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:#5A77DF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+/* Links inside the Dropdown */
+.dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/* Show the dropdown content and make text purple on hover of Tutorials */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change color of dropdown links to purple when hovering over Tutorials */
+.dropdown:hover .dropdown-content a {
+    color: #5A77DF; /* Purple Text */
+}
+
+/* Hover Effect — Only Underline */
+.dropdown-content a:hover {
+    background-color: white;
+    color:#5A77DF;
+    text-decoration: underline;
+}
+
+/* Show the dropdown menu when clicked */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+/* Authentication Links */
+.auth-links {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Authentication Paragraphs */
+.auth-links p {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Hover Effect for Auth Links */
+.auth-links p:hover {
+    color: white;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+
+    /* Main Content without Sidebar */
+    .main-content {
+        margin-left: 0 !important;
+        transition: margin-left 0.3s ease;
+        padding: 15px;
+        margin-top:50px;
+    }
+
+    .mobile-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5A77DF;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    /* Navbar List */
+    .mobile-navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar Links */
+    .mobile-navbar ul li a {
+        text-decoration: none;
+        padding: 8px 12px;
+        font-size: 1rem;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    /* Active and Hover State */
+    .mobile-navbar ul li a:hover,
+    .mobile-navbar ul li a.active {
+        background-color: white;
+        color: #5A77DF;
+    }
+
+    /* Tutorials Dropdown */
+    .mobile-navbar .dropdown {
+        position: relative;
+    }
+
+    /* Dropdown Content */
+    .mobile-navbar .dropdown-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        z-index: 1001;
+    }
+
+    /* Show on Hover */
+    .mobile-navbar .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    /* Dropdown Links */
+    .mobile-navbar .dropdown-content li {
+        list-style: none;
+        margin: 5px 0;
+    }
+
+    .mobile-navbar .dropdown-content li a {
+        padding: 8px;
+        color: #5A77DF;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background-color 0.2s;
+    }
+
+    /* Hover Effect on Dropdown Items */
+    .mobile-navbar .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Hide Desktop Sidebar on Mobile */
+    .sidebar {
+        display: none;
+    }
+
+    /* Adjust Main Content for Mobile */
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px; /* Avoid overlap with navbar */
+    }
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scroll main content if needed */
+    background-color: #f5f6fa;
+    position:relative;
+}
+  
+  /* Structure Section */
+.structure-section {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 12px;
+    margin-left:30px;
+    
+}
+
+/* Heading */
+  .structure-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Description Text */
+  .structure-section p {
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+/* Code Container */
+.code-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Individual Code Card */
+.code-card {
+    background-color:#c4cce7;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height:280px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Header of the Card */
+.card-header {
+    background-color: #5A77DF;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Body of the Card */
+.card-body {
+    margin-left: -50px;
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
+    font-size: 1rem;
+    white-space: pre-wrap; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words */
+    max-width: 100%; /* Ensure content doesn't overflow */
+}
+
+/* Hover Effect */
+.code-card:hover {
+    transform: translateY(-10px);
+}
+.code-card2:hover {
+    transform: translateY(-10px);
+}
+
+/* Explanation Section */
+.explanation-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-left:40px;
+    margin-bottom:100px;
+}
+
+/* Left Text */
+.left-text {
+    width: 50%;
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 12px;
+}
+/* Swiper Container */
+.swiper-container {
+    width: 45%;
+    height: 300px;
+    margin-right:30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    
+}
+
+/* Swiper Card */
+.swiper-card {
+    position: absolute;
+    width: 80%;
+    height: 250px;
+    background-color: #5A77DF;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.7);
+    z-index: 0;
+}
+
+/* Middle Active Card */
+.swiper-card.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+    background-color: #374A9D; /* Darker shade for emphasis */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading Styling */
+.swiper-card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color:white;
+
+}
+
+/* Paragraph Text */
+.swiper-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+
+/* Next Card (Right Side) */
+.swiper-card.next {
+    opacity: 0.7;
+    background-color: #7085E6; /* Lighter shade */
+    transform: translateX(120px) scale(0.85);
+    z-index: 2;
+}
+
+/* Next-Next Card (Far Right) */
+.swiper-card.next-next {
+    opacity: 0.5;
+    background-color: #A0B6F7; /* Even lighter shade */
+    transform: translateX(240px) scale(0.75);
+    z-index: 1;
+}
+
+/* Previous Card (Left Side) */
+.swiper-card.prev {
+    opacity: 0.7;
+    background-color: #7085E6;
+    transform: translateX(-120px) scale(0.85);
+    z-index: 2;
+}
+
+/* Previous-Previous Card (Far Left) */
+.swiper-card.prev-prev {
+    opacity: 0.5;
+    background-color: #A0B6F7;
+    transform: translateX(-240px) scale(0.75);
+    z-index: 1;
+}
+
+@media (max-width: 768px) { /* For mobile devices */
+    
+    /* Stack the elements vertically */
+    .explanation-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    /* Left Text Full Width on Mobile */
+    .left-text {
+        width: 90%; /* Take full width on mobile */
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Swiper Container Full Width */
+    .swiper-container {
+        width: 90%;
+        height: 250px;
+        margin-right: 0;
+        overflow: hidden;
+    }
+
+    /* Swiper Card Adjustments */
+    .swiper-card {
+        width: 80%; /* Slightly smaller for better fit */
+        height: 200px;
+        font-size: 0.75rem;
+        transform: scale(0.8);
+    }
+
+    /* Active Swiper Card on Mobile */
+    .swiper-card.active {
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Adjust Positions for Mobile */
+    .swiper-card.next {
+        transform: translateX(80px) scale(0.85);
+    }
+    .swiper-card.next-next {
+        transform: translateX(160px) scale(0.75);
+    }
+    .swiper-card.prev {
+        transform: translateX(-80px) scale(0.85);
+    }
+    .swiper-card.prev-prev {
+        transform: translateX(-160px) scale(0.75);
+    }
+}
+
+
+/* Individual Code Card */
+.code-card2 {
+    background-color:#c4cce7;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height:340px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) { /* For mobile devices */
+
+    /* Code and Output Boxes */
+    .code-box, .output-box {
+        width: 90%; /* Slightly smaller width */
+        padding: 10px; /* Less padding for compactness */
+        font-size: 0.9rem; /* Smaller font size */
+        margin-bottom: 15px; /* Slightly reduce margin */
+        border-radius: 10px; /* Slightly smaller corner radius */
+    }
+
+    /* Header Styling for Boxes */
+    .code-box h2, .output-box h2 {
+        font-size: 1rem; /* Smaller heading size */
+        padding: 8px; /* Less padding in header */
+    }
+
+    /* Code Content */
+    .code-box pre, .output-box pre {
+        font-size: 0.85rem; /* Smaller font for code */
+        line-height: 1.4; /* Compact line spacing */
+    }
+
+    /* Link Styling */
+    .code-box a, .output-box a {
+        font-size: 0.75rem; /* Smaller link text */
+    }
+}
+
+
+/* Footer Section */
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+/* Footer Links */
+.footer-links a {
+    color: #4b5dab;
+    text-decoration: underline;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color:#4B0082;
+}
+
+/* Contact Link */
+.contact-link {
+    color:#4061db;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contact-link:hover {
+    color:#4B0082;
+}

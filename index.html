@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cplusplus.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="sidebar"> 
+        <h2>cplusplus.com</h2>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+    
+            <!-- Tutorials Button -->
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Tutorials</button>
+                    <div class="dropdown-content">
+                      <a href="#">C++ Language</a>
+                      <a href="#">Basics Of C++</a>
+                      <a href="structure.html">Structure of<br> program</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li><a href="references.html">References</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="forum.html">Forum</a></li>
+        </ul>
+    
+        <div class="auth-links">
+            <p>Sign up</p>
+            <p>Login</p>
+            <p>[Legacy Version]</p>
+        </div>
+    </div>
+     <!-- Top Navbar for Mobile & Tablet -->
+<div class="mobile-navbar">
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <!-- Tutorials Dropdown -->
+        <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul class="dropdown-content">
+                <li><a href="#">C++ Language</a></li>
+                <li><a href="#">Basics of C++</a></li>
+                <li><a href="structure.html">Structure of Program</a></li>
+            </ul>
+        </li>
+
+        <li><a href="references.html">References</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="forum.html">Forum</a></li>
+    </ul>
+</div>
+
+
+    <div class="main-content">
+        <section class="hero-section">
+            <h1>All Your Learning in <span>One</span> Place</h1>
+            <p>Learn something new every day and get inspired by the diversity of online C++ learning.</p>
+            <div class="search-container">
+                <input type="text" placeholder="What do you want to learn today?" class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </section>
+
+       
+        <section class="feature-section">
+            <a href="tutorials.html" target="_blank" class="feature-box">
+                <i class="fa-solid fa-chalkboard-user icon"></i>
+                <h3>Tutorials</h3>
+            </a>
+            <a href="references.html" target="_blank" class="feature-box">
+                <i class="fa-solid fa-book icon"></i>
+                <h3>References</h3>
+            </a>
+            <a href="articles.html" target="_blank" class="feature-box">
+                <i class="fa-solid fa-newspaper icon"></i>
+                <h3>Articles</h3>
+            </a>
+        </section>
+
+        <section class="forum-section">
+            <h2>Latest Forum Discussions</h2><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Category</th>
+                        <th>Likes</th>
+                        <th>Replies</th>
+                        <th>Posted By</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Topic">Getter for enum member returns a copy of enum?</td>
+                        <td data-label="Category"><span class="tag b">Beginners</span></td>
+                        <td data-label="Likes">985</td>
+                        <td data-label="Replies"><b>11</b></td>
+                        <td data-label="Posted By">ElusiveTau</td>
+                        <td data-label="Activity">Mar 19, 2025 at 8:02am</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Use C++ 20 with Embarcadero</td>
+                        <td data-label="Category"><span class="tag g">General C++ Programming</span></td>
+                        <td data-label="Likes">584</td>
+                        <td data-label="Replies"><b>4</b></td>
+                        <td data-label="Posted By">bistelA0005</td>
+                        <td data-label="Activity">Mar 18, 2025 at 9:06am</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Call of Templated Function w/ Explicit Template Argument Fails to Compile</td>
+                        <td data-label="Category"><span class="tag g">General C++ Programming</span></td>
+                        <td data-label="Likes">401</td>
+                        <td data-label="Replies"><b>1</b></td>
+                        <td data-label="Posted By">BernardIE5317</td>
+                        <td data-label="Activity">Mar 16, 2025 at 3:50am</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">I wrote a cron job!</td>
+                        <td data-label="Category"><span class="tag l">Lounge</span></td>
+                        <td data-label="Likes">308</td>
+                        <td data-label="Replies"><b>12</b></td>
+                        <td data-label="Posted By">Duthomhas</td>
+                        <td data-label="Activity">Mar 15, 2025 at 11:32pm</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Random Story Time</td>
+                        <td data-label="Category"><span class="tag l">Lounge</span></td>
+                        <td data-label="Likes">358</td>
+                        <td data-label="Replies"><b>19</b></td>
+                        <td data-label="Posted By">Duthomhas</td>
+                        <td data-label="Activity">Mar 14, 2025 at 1:59pm</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Formatted Console Log with Datetime</td>
+                        <td data-label="Category"><span class="tag w">Windows Programming</span></td>
+                        <td data-label="Likes">280</td>
+                        <td data-label="Replies"><b>7</b></td>
+                        <td data-label="Posted By">ElusiveTau</td>
+                        <td data-label="Activity">Mar 12, 2025 at 9:12pm</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Well, it looks like Mozilla is finally turning Evil</td>
+                        <td data-label="Category"><span class="tag l">Lounge</span></td>
+                        <td data-label="Likes">420</td>
+                        <td data-label="Replies"><b>6</b></td>
+                        <td data-label="Posted By">Duthomhas</td>
+                        <td data-label="Activity">Mar 12, 2025 at 2:19am</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Scientific computing - optimize speed</td>
+                        <td data-label="Category"><span class="tag g">General C++ Programming</span></td>
+                        <td data-label="Likes">645</td>
+                        <td data-label="Replies"><b>16</b></td>
+                        <td data-label="Posted By">PhysicsIsFun</td>
+                        <td data-label="Activity">Mar 7, 2025 at 2:23pm</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Topic">Why can't I use cout without iostream</td>
+                        <td data-label="Category"><span class="tag g">General C++ Programming</span></td>
+                        <td data-label="Likes">280</td>
+                        <td data-label="Replies"><b>5</b></td>
+                        <td data-label="Posted By">stonediver</td>
+                        <td data-label="Activity">Mar 6, 2025 at 9:18pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        
+    <br><br><br><br><hr>
+    <footer class="footer">
+        
+        <div class="footer-links">
+            <a href="index.html">Home page</a> | 
+            <a href="#">Privacy policy</a>
+        </div>
+        <p>© cplusplus.com, 2000-2023 - All rights reserved - <strong>v3.3.4s</strong></p>
+        <a href="#" class="contact-link">Spotted an error? contact us</a>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

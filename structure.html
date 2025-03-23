@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure Of Program</title>
+    <link rel="stylesheet" href="structure.css">
+</head>
+<body>
+    <div class="sidebar"> 
+        <h2>cplusplus.com</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+    
+            <!-- Tutorials Button -->
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">Tutorials</button>
+                    <div class="dropdown-content">
+                      <a href="#">C++ Language</a>
+                      <a href="#">Basics Of C++</a>
+                      <a href="structure.html" class="active">Structure of<br> program</a>
+                    </div>
+                </div>
+            </li>
+            
+            <li><a href="references.html">References</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="forum.html">Forum</a></li>
+        </ul>
+    
+        <div class="auth-links">
+            <p>Sign up</p>
+            <p>Login</p>
+            <p>[Legacy Version]</p>
+        </div>
+    </div>
+    <!-- Top Navbar for Mobile & Tablet -->
+<div class="mobile-navbar">
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+
+        <!-- Tutorials Dropdown -->
+        <li class="dropdown">
+            <a href="#">Tutorials</a>
+            <ul class="dropdown-content">
+                <li><a href="#">C++ Language</a></li>
+                <li><a href="#">Basics of C++</a></li>
+                <li><a href="structure.html" class="active">Structure of Program</a></li>
+            </ul>
+        </li>
+
+        <li><a href="references.html">References</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="forum.html">Forum</a></li>
+    </ul>
+</div>
+
+   
+    <div class="main-content">
+        
+        <section class="structure-section">
+          
+          <h1>Structure of Program</h1><hr><br>
+          <p>
+            The best way to learn a programming language is by writing programs. Typically, the first program beginners write is a program called "Hello World", which simply prints "Hello World" to your computer screen. Although it is very simple, it contains all the fundamental components C++ programs have:
+          </p>
+          </section>
+
+        <div class="code-container">
+            <div class="code-card">
+                <div class="card-header">Code</div>
+                <div class="card-body">
+                    <pre><code>
+        #include iostream>
+        
+            int main()
+            {
+              std::cout << "Hello World!";
+            }
+                </code></pre>
+                </div>
+            </div>
+        
+            <div class="code-card">
+                <div class="card-header">Output</div>
+                <div class="card-body">
+                    <pre><code><br><br>
+                    Hello World!
+                    </code></pre>
+                </div>
+            </div>
+            <!-- Edit & Run Button -->
+<div class="edit-run-button">
+    <a href="https://cpp.sh/" target="_blank">
+        Edit and run on cpp.sh
+    </a>
+</div>
+        </div>
+        <!-- Explanation Section -->
+        <div class="explanation-section">
+            <div class="left-text">
+                <h2>Explanation of the Code</h2><br>
+                <p>
+                    - The <strong>#include &lt;iostream&gt;</strong> is a preprocessor directive to include the input-output stream library. <br><br>
+                    - <strong>int main()</strong> is the starting point of the program. <br><br>
+                    - <strong>std::cout</strong> is used to print output to the screen. <br><br>
+                    - <strong>"Hello World!"</strong> is the message being displayed. <br><br>
+                    - <strong>return 0;</strong> indicates successful program termination.
+                </p>
+            </div>
+            
+            <div class="swiper-container">
+                <div class="swiper-card">
+                    <h2>Line 1</h2>
+                    <p>Two slash signs indicate that the rest of the line is a comment inserted by the programmer but which has no effect on the behavior of the program.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 2</h2>
+                    <p>The directive #include &lt;iostream&gt;, instructs the preprocessor to include a section of standard C++ code, known as header iostream.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 3</h2>
+                    <p>Blank lines have no effect on a program. They simply improve readability of the code.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 4</h2>
+                    <p>This line initiates the declaration of a function. This gives the name "main" to the group of code statements that follow.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 5 & 7</h2>
+                    <p>The open brace ({) at line 5 indicates the beginning of main's function definition, and the closing brace (}) at line 7, indicates its end.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 6 Part-1</h2>
+                    <p>First, std::cout, which identifies the standard character output device. Second, the insertion operator (<<), which indicates that what follows is inserted into std::cout.</p>
+                </div>
+            
+                <div class="swiper-card">
+                    <h2>Line 6 Part-2</h2>
+                    <p>Finally, a sentence within quotes ("Hello world!"), is the content inserted into the standard output.</p>
+                </div>
+            </div>
+            
+        </div>
+        <section class="structure-section">
+            
+            <h1>Comments</h1><hr><br>
+            <p>
+                As noted above, comments do not affect the operation of the program; however, they provide an important tool to document directly within the source code what the program does and how it operates.
+
+                C++ supports two ways of commenting code:<br><br>
+                
+                1. // line comment<br>
+                2. /* block comment */
+            </p>
+            </section>
+            <div class="code-container">
+                <div class="code-card2">
+                    <div class="card-header">Code</div>
+                    <div class="card-body">
+                        <pre><code>
+        /* my second program in C++
+        with more comments */
+                 
+        #include iostream>
+                         
+        int main ()
+        {
+            std::cout << "Hello World! ";     
+            // prints Hello World!
+            std::cout << "I'm a C++ program"; 
+            // prints I'm a C++ program
+        }
+                    </code></pre>
+                    </div>
+                </div>
+            
+                <div class="code-card2">
+                    <div class="card-header">Output</div>
+                    <div class="card-body">
+                        <pre><code><br><br><br><br>
+            Hello World! I'm a C++ program
+                        </code></pre>
+                    </div>
+                </div>
+                <!-- Edit & Run Button -->
+    <div class="edit-run-button">
+        <a href="https://cpp.sh/" target="_blank">
+            Edit and run on cpp.sh
+        </a>
+    </div></div>
+    <br><br><br><br><hr>
+    <footer class="footer">
+        
+        <div class="footer-links">
+            <a href="index.html">Home page</a> | 
+            <a href="#">Privacy policy</a>
+        </div>
+        <p>© cplusplus.com, 2000-2023 - All rights reserved - <strong>v3.3.4s</strong></p>
+        <a href="#" class="contact-link">Spotted an error? contact us</a>
+    </footer>
+    </div>
+    <script src="s_script.js"></script> 
+</body>
+</html>
